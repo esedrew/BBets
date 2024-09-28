@@ -147,7 +147,25 @@ cat("Standard Deviation of Probabilities:", sd_probs, "\n")
 
 ```
 
+```{r}
+# Simulation settings
+class_size <- 23
+n_sim <- 1000
+n_trials <- 100
 
+# Vector to store the probabilities from each trial
+probs <- numeric(n_trials)
+
+# Run the simulation 100 times
+for (i in 1:n_trials) {
+  probs[i] <- same_birthday_prob(class_size, n_sim)
+}
+
+cat("probability of win = ", mean(probs))
+
+```
+
+number students for a fair game 1-1 pay off is 23
 
 ### Explanation:
 
