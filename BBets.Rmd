@@ -1,6 +1,6 @@
 ---
 title: "BBets"
-author: "Your Name Here"
+author: "Andrew Gligoriu Valladares"
 output: html_document
 date: "2024-09-27"
 ---
@@ -75,6 +75,18 @@ cat("Mean Probability:", mean_probs, "\n")
 cat("Standard Deviation of Probabilities:", sd_probs, "\n")
 
 ```
+
+the probability that Dr. J wins is 0.8133
+
+```{r}
+EV = mean_probs*1*26
+cat("expected profit = ", EV)
+
+correctbet = mean_probs/(1-mean_probs)
+cat("correct bet = ", correctbet)
+
+```
+
 
 ```{r}
 hist(probs, main = "Histogram of Probabilities", xlab = "Probability", col = "lightblue", border = "black")
